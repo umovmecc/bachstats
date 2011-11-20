@@ -8,3 +8,5 @@ If you want to integrate this app to Eclipse IDE, call this command:
 play eclipsify bachstats
 If you call integration to another IDE, remember to add specific files generated into .gitignore file. 
 
+Heroku paths
+http://bachstats.heroku.com/ | git@heroku.com:bachstats.git
