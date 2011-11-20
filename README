@@ -1,0 +1,10 @@
+Download play:
+http://www.playframework.org/
+
+Add play to your path, to make easy calls using just "play":
+export PATH=$PATH:/current/path/to/lib/play-1.2.3
+
+If you want to integrate this app to Eclipse IDE, call this command:
+play eclipsify bachstats
+If you call integration to another IDE, remember to add specific files generated into .gitignore file. 
+
