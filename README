@@ -10,3 +10,4 @@ If you call integration to another IDE, remember to add specific files generated
 
 Heroku paths
 http://bachstats.heroku.com/ | git@heroku.com:bachstats.git
+git push heroku master
