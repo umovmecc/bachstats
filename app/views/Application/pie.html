@@ -1,0 +1,30 @@
+<!-- bacheador / painel de pilotagem de indicadores -->
+<html>
+  <head>
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Task');
+        data.addColumn('number', 'Hours per Day');
+        data.addRows(3);
+        data.setValue(0, 0, 'Novas funcionalidades');
+        data.setValue(0, 1, 63);
+        data.setValue(1, 0, 'Pesquisa');
+        data.setValue(1, 1, 14);
+        data.setValue(2, 0, 'Defeitos');
+        data.setValue(2, 1, 20);
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, {width: 450, height: 300, title: 'Produtividade da Semana', colors: ['yellow','green', 'red'], is3D: true});
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>
