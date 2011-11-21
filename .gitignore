@@ -7,3 +7,4 @@ modules/
 lib/
 test-result/
 logs/
+*.class
