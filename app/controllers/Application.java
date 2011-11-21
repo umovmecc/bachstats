@@ -13,8 +13,17 @@ public class Application extends Controller {
         render();
     }
 
-    public static void graph() {
+    public static void pie() {
         render();
+    }
+
+    public static void graph() {
+    	    List listaPontosRealizados = new ArrayList();
+    	    listaPontosRealizados.add(new MetricItem(21,60,23));
+    	    listaPontosRealizados.add(new MetricItem(22,60,42));    	    
+    	    listaPontosRealizados.add(new MetricItem(23,60,86));
+    	
+        render(listaPontosRealizados);
     }
 
 }
