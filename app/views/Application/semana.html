@@ -1,7 +1,8 @@
-<!-- bacheador / painel de pilotagem de indicadores -->
-<html>
-  <head>
-	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+#{extends 'main.html' /}
+#{set 'title'}
+  ${kpi.slug}
+#{/set}
+
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">    
     
@@ -34,27 +35,27 @@
                   });
       }
     </script>
-  </head>
 
-  <body>    
-  
-  <table border=1>
-<tr>
-  <td>semana</td>
-  <td>planejado</td>
-  <td>realizado</td>
-</tr>
-  #{if listaPontosRealizados.size() > 1}
-  #{list items:listaPontosRealizados, as:'pontos'}
-  <tr>
-  <td>${pontos.weekReference}</td>
-  <td>${pontos.expected}</td>
-  <td>${pontos.actual}</td>
-  </tr>
-  #{/list}
-  #{/if}
-</table>
-  
+  <div class="row">
+  <div class="span6">
+		<table border=1>
+		<tr>
+		  <td>semana</td>
+		  <td>planejado</td>
+		  <td>realizado</td>
+		</tr>
+		  #{if listaPontosRealizados.size() > 1}
+		  #{list items:listaPontosRealizados, as:'pontos'}
+		  <tr>
+		  <td>${pontos.weekReference}</td>
+		  <td>${pontos.expected}</td>
+		  <td>${pontos.actual}</td>
+		  </tr>
+		  #{/list}
+		  #{/if}
+		</table>
+  </div>
+  <div class="span10">
     <div id="chart_div"></div>
-  </body>
-</html>
+  </div>
+</div>

@@ -1,13 +1,26 @@
 package models;
 
-public class MetricItem {
+import java.util.*;
+import javax.persistence.*;
+ 
+import play.db.jpa.*;
 
+@Entity
+public class KPIData extends Model{
+
+	
+	
 	private int weekReference;
 	private double expected;
 	private double actual;
 	
-	public MetricItem(int weekReference, double expected, double actual) {
+	 @ManyToOne
+	 public KeyProcessIndicator kpi;
+
+	
+	public KPIData(KeyProcessIndicator kpi, int weekReference, double expected, double actual) {
 		super();
+		this.kpi = kpi;
 		this.weekReference = weekReference;
 		this.expected = expected;
 		this.actual = actual;

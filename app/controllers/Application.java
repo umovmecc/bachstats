@@ -17,13 +17,19 @@ public class Application extends Controller {
         render();
     }
 
-    public static void graph() {
-    	    List listaPontosRealizados = new ArrayList();
-    	    listaPontosRealizados.add(new MetricItem(21,60,23));
-    	    listaPontosRealizados.add(new MetricItem(22,60,42));    	    
-    	    listaPontosRealizados.add(new MetricItem(23,60,86));
+    public static void about() {
+        render();
+    }
+
+    public static void semana() {
+    		KeyProcessIndicator kpi = new KeyProcessIndicator("produtividade-semana");
     	
-        render(listaPontosRealizados);
+    	    List<KPIData> listaPontosRealizados = new ArrayList<KPIData>();
+    	    listaPontosRealizados.add(new KPIData(kpi,21,60,23));
+    	    listaPontosRealizados.add(new KPIData(kpi,22,60,42));    	    
+    	    listaPontosRealizados.add(new KPIData(kpi,23,60,86));
+    	
+        render(kpi, listaPontosRealizados);
     }
 
 }
