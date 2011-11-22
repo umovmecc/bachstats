@@ -22,7 +22,8 @@ public class Application extends Controller {
     }
 
     public static void semana() {
-    		KeyProcessIndicator kpi = new KeyProcessIndicator("produtividade-semana");
+    		KeyProcessIndicator kpi = 
+    			new KeyProcessIndicator("produtividade-semana",100,true);
     	
     	    List<KPIData> listaPontosRealizados = new ArrayList<KPIData>();
     	    listaPontosRealizados.add(new KPIData(kpi,21,60,23));

@@ -3,7 +3,8 @@
   ${kpi.slug}
 #{/set}
 
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+#{set 'moreScripts'}
     <script type="text/javascript">    
     
     
@@ -17,11 +18,11 @@
  
         data.addRows(
         [
-#{if listaPontosRealizados.size() > 1}
-#{list items:listaPontosRealizados, as:'pontos'}
- ['${pontos.weekReference}',${pontos.expected},${pontos.actual}],
-#{/list}
-#{/if}
+			#{if listaPontosRealizados.size() > 1}
+			#{list items:listaPontosRealizados, as:'pontos'}
+			 ['${pontos.weekReference}',${pontos.expected},${pontos.actual}],
+			#{/list}
+			#{/if}
         ]);
 
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
@@ -35,14 +36,17 @@
                   });
       }
     </script>
+#{/set}
 
   <div class="row">
   <div class="span6">
 		<table border=1>
 		<tr>
-		  <td>semana</td>
-		  <td>planejado</td>
-		  <td>realizado</td>
+		  <td>week</td>
+		  <td>expected</td>
+		  <td>actual</td>
+		  <td>perc (%)</td>
+		  <td>trend</td>
 		</tr>
 		  #{if listaPontosRealizados.size() > 1}
 		  #{list items:listaPontosRealizados, as:'pontos'}
@@ -50,6 +54,10 @@
 		  <td>${pontos.weekReference}</td>
 		  <td>${pontos.expected}</td>
 		  <td>${pontos.actual}</td>
+		  <td>${pontos.actualExpectedPercentage.format('###.##')}</td>
+		  <td>
+		     <span class="label ${pontos.trend}">${pontos.trend}</span>
+		  </td>
 		  </tr>
 		  #{/list}
 		  #{/if}

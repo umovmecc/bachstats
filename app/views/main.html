@@ -4,6 +4,7 @@
     <head>
         <title>#{get 'title' /}</title>
         <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
         
         <meta charset="${_response_encoding}">
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
@@ -23,10 +24,10 @@
 	    <div class="topbar">
 	      <div class="fill">
 	        <div class="container">
-	          <a class="brand" href="#">Bachstats</a>
+	          <a class="brand" href="/application/index">Bachstats</a>
 	          <ul class="nav">
-	            <li class="active"><a href="semana">Produtividade Semana</a></li>
-	            <li><a href="about">Sobre</a></li>
+	            <li class="active"><a href="/application/semana">Produtividade Semana</a></li>
+	            <li><a href="/application/about">Sobre</a></li>
 	          </ul>
 	        </div>
 	      </div>

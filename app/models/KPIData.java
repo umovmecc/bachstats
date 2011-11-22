@@ -8,8 +8,6 @@ import play.db.jpa.*;
 @Entity
 public class KPIData extends Model{
 
-	
-	
 	private int weekReference;
 	private double expected;
 	private double actual;
@@ -43,6 +41,32 @@ public class KPIData extends Model{
 	}
 	public double getActual() {
 		return actual;
+	}
+
+	public double getActualExpectedPercentage()
+	{
+		return (actual / expected) * 100; 
+	}
+	
+	public String getTrend()
+	{
+		if(kpi.isTrendingUp())
+		{
+			//if(getActualExpectedPercentage() < (kpi.getLimitPercentage() * 0.25)) 
+		    //		return "important";
+			
+			if(getActualExpectedPercentage() < (kpi.getLimitPercentage())) 
+				return "important";
+		}
+		else{
+			//if(getActualExpectedPercentage() > (kpi.getLimitPercentage() * 0.5)) 
+			//	return "important";
+			
+			if(getActualExpectedPercentage() > (kpi.getLimitPercentage())) 
+				return "important";
+			
+		}
+		return "success";
 	}
 	
 }

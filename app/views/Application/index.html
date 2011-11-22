@@ -1,4 +1,32 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{welcome /}
+#{set 'moreScripts'}
+	<script type="text/javascript" src="//www.google.com/jsapi"></script>
+	<script type="text/javascript">
+	
+	google.load("visualization", "1", {packages:["gauge", "corechart"]});
+	google.setOnLoadCallback(drawGauge);
+	
+	
+	function drawGauge() {
+		var gaugeData = new google.visualization.DataTable();
+		gaugeData.addColumn('number', 'semana 23');
+		gaugeData.addRows(1);
+		gaugeData.setCell(0, 0, 86);
+		var gaugeOptions = {min: 0, max: 200, 
+				            yellowFrom: 51, yellowTo: 60,
+		                    redFrom: 0, redTo: 50, 
+		                    minorTicks: 5};
+		var gauge;
+	  gauge = new google.visualization.Gauge(document.getElementById('gauge_div'));
+	  gauge.draw(gaugeData, gaugeOptions);
+	}
+	</script>
+#{/set}
+
+
+
+Work in progress...
+
+<div id="gauge_div" style="width:280px; height: 140px;"></div>
