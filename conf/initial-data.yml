@@ -1,0 +1,49 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+KeyProcessIndicator(semana):
+   slug: semana
+   limitPercentage: 100
+   trendingUp: true
+   
+KPIData(semana-21):
+   kpi: semana
+   weekReference: 21
+   expected: 60
+   actual: 23
+      
+KPIData(semana-22):
+   kpi: semana
+   weekReference: 22
+   expected: 60
+   actual: 42
+   
+KPIData(semana-23):
+   kpi: semana
+   weekReference: 23
+   expected: 60
+   actual: 86
+   
+   
+KeyProcessIndicator(defeitos):
+   slug: defeitos
+   limitPercentage: 15
+   trendingUp: false
+   
+KPIData(defeitos-21):
+   kpi: defeitos
+   weekReference: 21
+   expected: 20
+   actual: 30
+      
+KPIData(defeitos-22):
+   kpi: defeitos
+   weekReference: 22
+   expected: 20
+   actual: 8
+   
+KPIData(defeitos-23):
+   kpi: defeitos
+   weekReference: 23
+   expected: 20
+   actual: 3

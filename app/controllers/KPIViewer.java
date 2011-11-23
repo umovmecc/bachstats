@@ -7,23 +7,11 @@ import java.util.*;
 
 import models.*;
 
-public class Application extends Controller {
+public class KPIViewer extends Controller {
 
-    public static void index() {
-        render();
-    }
-
-    public static void pie() {
-        render();
-    }
-
-    public static void about() {
-        render();
-    }
-
-    public static void semana() {
+    public static void show(String slug) {
     	KeyProcessIndicator kpi = 
-    		KeyProcessIndicator.find("bySlug", "semana").first();
+    		KeyProcessIndicator.find("bySlug", slug).first();
 
     	List<KPIData> kpiDataItems = 
     		KPIData.find("byKpi", kpi).fetch();
