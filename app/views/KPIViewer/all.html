@@ -1,0 +1,17 @@
+#{extends 'main.html' /}
+#{set 'title'}
+  Ver todos indicadores 
+#{/set}
+
+
+
+  #{if kpis.size() > 0}
+  #{list items:kpis, as:'item'}
+	  <div class="row">
+	  <div class="span16">
+		<a href="/kpi/${item.slug}">${item.slug}</a>
+	  </div>
+	  </div>
+  #{/list}
+  #{/if}
+  

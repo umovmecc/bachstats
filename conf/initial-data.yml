@@ -5,45 +5,165 @@ KeyProcessIndicator(semana):
    slug: semana
    limitPercentage: 100
    trendingUp: true
-   
+
 KPIData(semana-21):
    kpi: semana
    weekReference: 21
    expected: 60
    actual: 23
-      
+
 KPIData(semana-22):
    kpi: semana
    weekReference: 22
    expected: 60
    actual: 42
-   
+
 KPIData(semana-23):
    kpi: semana
    weekReference: 23
    expected: 60
-   actual: 86
-   
-   
+   actual: 86 
+
+
 KeyProcessIndicator(defeitos):
    slug: defeitos
    limitPercentage: 15
    trendingUp: false
-   
+
 KPIData(defeitos-21):
    kpi: defeitos
    weekReference: 21
    expected: 20
    actual: 30
-      
+
 KPIData(defeitos-22):
    kpi: defeitos
    weekReference: 22
    expected: 20
    actual: 8
-   
+
 KPIData(defeitos-23):
    kpi: defeitos
    weekReference: 23
    expected: 20
    actual: 3
+
+
+KeyProcessIndicator(funcionalidades):
+   slug: novas-funcionalidades
+   limitPercentage: 70
+   trendingUp: true
+
+KPIData(funcionalidades-21):
+   kpi: funcionalidades
+   weekReference: 21
+   expected: 50
+   actual: 38
+
+KPIData(funcionalidades-22):
+   kpi: funcionalidades
+   weekReference: 22
+   expected: 50
+   actual: 45
+
+KPIData(funcionalidades-23):
+   kpi: funcionalidades
+   weekReference: 23
+   expected: 50
+   actual: 67
+
+
+KeyProcessIndicator(pesquisas):
+   slug: pesquisas
+   limitPercentage: 15
+   trendingUp: false
+
+KPIData(pesquisas-21):
+   kpi: pesquisas
+   weekReference: 21
+   expected: 20
+   actual: 25
+
+KPIData(pesquisas-22):
+   kpi: pesquisas
+   weekReference: 22
+   expected: 20
+   actual: 10
+
+KPIData(pesquisas-23):
+   kpi: pesquisas
+   weekReference: 23
+   expected: 20
+   actual: 5
+
+
+KeyProcessIndicator(tickets_fechados_sem_desenv):
+   slug: tickets-fechados-sem-desenvolvimento
+   limitPercentage: 70
+   trendingUp: true
+
+KPIData(tickets_fechados_sem_desenv-5):
+   kpi: tickets_fechados_sem_desenv
+   weekReference: 5
+   expected: 285
+   actual: 248
+
+KPIData(tickets_fechados_sem_desenv-6):
+   kpi: tickets_fechados_sem_desenv
+   weekReference: 6
+   expected: 310
+   actual: 205
+
+KPIData(tickets_fechados_sem_desenv-7):
+   kpi: tickets_fechados_sem_desenv
+   weekReference: 7
+   expected: 450
+   actual: 306
+
+
+KeyProcessIndicator(tickets_fechados_com_desenv):
+   slug: tickets-fechados-com-desenvolvimento
+   limitPercentage: 30
+   trendingUp: false
+
+KPIData(tickets_fechados_com_desenv-5):
+   kpi: tickets_fechados_com_desenv
+   weekReference: 5
+   expected: 285
+   actual: 37
+
+KPIData(tickets_fechados_com_desenv-6):
+   kpi: tickets_fechados_com_desenv
+   weekReference: 6
+   expected: 310
+   actual: 105
+
+KPIData(tickets_fechados_com_desenv-7):
+   kpi: tickets_fechados_com_desenv
+   weekReference: 7
+   expected: 450
+   actual: 144
+
+
+KeyProcessIndicator(tickets_SLA_excedido):
+   slug: tickets-SLA-excedido
+   limitPercentage: 110
+   trendingUp: false
+
+KPIData(tickets_SLA_excedido-5):
+   kpi: tickets_SLA_excedido
+   weekReference: 5
+   expected: 10
+   actual: 31
+
+KPIData(tickets_SLA_excedido-6):
+   kpi: tickets_SLA_excedido
+   weekReference: 6
+   expected: 10
+   actual: 0
+
+KPIData(tickets_SLA_excedido-7):
+   kpi: tickets_SLA_excedido
+   weekReference: 7
+   expected: 10
+   actual: 11

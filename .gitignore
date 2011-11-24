@@ -8,3 +8,7 @@ lib/
 test-result/
 logs/
 *.class
+bin/
+data/
+db/
+dist/
