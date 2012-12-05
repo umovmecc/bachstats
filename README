@@ -1,3 +1,12 @@
+What is bachstats?
+------------------
+
+A simple tool to help on creating a dashboard to play with indicators and trends. A simple way to build reports and review your daily data. 
+
+
+How to run the code?
+--------------------
+
 Download play:
 http://www.playframework.org/
 
@@ -8,6 +17,12 @@ If you want to integrate this app to Eclipse IDE, call this command:
 play eclipsify bachstats
 If you call integration to another IDE, remember to add specific files generated into .gitignore file. 
 
-Heroku paths
-http://bachstats.heroku.com/ | git@heroku.com:bachstats.git
-git push heroku master
+Need a demo? Check Heroku:
+--------------------------
+
+http://bachstats.herokuapp.com/
+
+Need help? Want to help?  
+------------------------
+
+Contact dwildt at gmail.com or twitter @dwildt
