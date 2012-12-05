@@ -13,3 +13,4 @@ data/
 db/
 dist/
 target/
+precompiled/
