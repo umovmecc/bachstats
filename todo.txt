@@ -1,0 +1,17 @@
+What's on the list?
+-------------------
+
+*  User control (admin and viewers)
+	* Viewers see kpi attached to its name
+	* Admins can change trend limits
+	
+* Create a trending line on graphics
+
+* Enable to load csv files (try a big textarea and then a process wizard)
+
+* Build a cockpit UI where one can examine specific kpis. 
+
+* Enable period selection from kpis. Need to find a way to filter since the unit is not a standard. Maybe add a date to it? 
+
+* How to manage trending limits? Up and down limits. 
+
